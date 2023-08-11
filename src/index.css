@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "nasa";
+	src: url("/fonts/nasalization.woff") format("woff");
+}
+@font-face {
+	font-family: "SF Pro";
+	src: url("/fonts/SFPRODISPLAYREGULAR.woff") format("woff");
+}
+
+body {
+	background-color: rgb(17, 19, 25);
+}
+.overflow-x-auto::-webkit-scrollbar {
+	display: none;
+}
