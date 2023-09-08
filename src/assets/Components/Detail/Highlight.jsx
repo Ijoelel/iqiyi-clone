@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import Slider from "react-slick";
 import VideoPlayer from "./VidPlayer";
+import DelArrow from "../../Utils/DelArrow";
 
 // eslint-disable-next-line react/prop-types
 const Highlight = ({ video }) => {
@@ -18,6 +19,8 @@ const Highlight = ({ video }) => {
 	};
 	const settings = {
 		dots: false,
+		nextArrow: <DelArrow/>,
+		prevArrow: <DelArrow/>,
 		slidesToShow: 2,
 		slidesToScroll: 2,
 		speed: 1000,

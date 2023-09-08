@@ -18,7 +18,7 @@ const WrapperApp = (prop) => {
 			return (
 				<Link
 					key={i}
-					className="w-32 h-full mr-4 last-of-type:mr-3 cursor-pointer"
+					className="w-32 lg:w-44 h-full mr-4 mb-2 last-of-type:mr-3 cursor-pointer object-cover"
 					to={`/movie/${movie.id}`}
 				>
 					<img
@@ -34,16 +34,16 @@ const WrapperApp = (prop) => {
 		});
 	};
 	return (
-		<>
-			<h1 className="font-sf italic text-lg text-white opacity-65">
+		<div className="py-3">
+			<h1 className="font-sf italic text-lg text-white opacity-65 ml-3 md:text-2xl">
 				{prop.title}
 			</h1>
-			<div className="w-full h-56 flex justify-center items-center relative overflow-x-auto p-5 mt-7">
-				<div className="h-full absolute top-0 left-3 flex justify-center items-center ">
+			<div className="w-full h-56 md:h-64 lg:h-80 flex justify-center items-center relative overflow-x-auto mt-1">
+				<div className="h-full absolute top-0 left-3 flex justify-center items-center px-3 py-2">
 					<MostMovie />
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

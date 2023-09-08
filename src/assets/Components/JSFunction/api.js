@@ -10,7 +10,7 @@ export const getList = async (prop) => {
 
 export const getTrending = async () => {
 	const movie = await axios.get(
-		`${baseUrl}/trending/all/week?language=en-US&api_key=${apiKey}`
+		`${baseUrl}/trending/movie/week?language=en-US&api_key=${apiKey}`
 	);
 	return movie.data.results.slice(0, 6);
 };
@@ -23,9 +23,11 @@ export const getGenre = async () => {
 };
 
 export const getVideo = async (id) => {
-	const {data} = await axios.get(`${baseUrl}/movie/${id}/videos?api_key=${apiKey}`)
-	return data.results
-}
+	const { data } = await axios.get(
+		`${baseUrl}/movie/${id}/videos?api_key=${apiKey}`
+	);
+	return data.results;
+};
 
 export const getDetail = async (id) => {
 	const { data } = await axios.get(
@@ -35,11 +37,13 @@ export const getDetail = async (id) => {
 };
 
 export const searchMovie = async (q) => {
-	const search = await axios.get(q);
-	return;
+	const search = await axios.get(`${baseUrl}/search/movie?query=${q}&api_key=${apiKey}`);
+	return search.data;
 };
 
 export const test = async (id) => {
-	const img = await axios.get(`${baseUrl}/movie/${id}/images?api_key=${apiKey}&vote_count.gte=10&vote_count.lte=20`)
-	return 	img.data.backdrops
-}
+	const img = await axios.get(
+		`${baseUrl}/movie/${id}/images?api_key=${apiKey}&vote_count.gte=10&vote_count.lte=20`
+	);
+	return img.data.backdrops;
+};

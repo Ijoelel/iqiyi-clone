@@ -5,12 +5,12 @@ import FooterApp from "../Components/Home/Footer";
 
 export default function Home() {
     return (
-        <>
+        <div>
             <NavbarApp/>
             <HeroApp/>
             <WrapperApp type='popular' title='Popular Movies'/>
             <WrapperApp type='upcoming' title='Upcoming Movies'/>
             <FooterApp/>
-        </>
+        </div>
     )
 }
